@@ -1,6 +1,6 @@
-# Python para inciantes da programação
+## Créditos e Referências
 
-todos as pastas e arquivos feitos foram com auxilio do livro "Introdução a programação com Python"
-de Nilo Ney Coutinho Menezes.
+Todos os arquivos e pastas deste repositório foram desenvolvidos com auxílio do livro 
+**"Introdução à Programação com Python"**, de **Nilo Ney Coutinho Menezes**. 
 
-Juntamente com o curso da EBAC "Desenvolvimento Back-end em Python"
+Juntamente com o conteúdo do curso **"Desenvolvimento Back-end em Python"** da **EBAC**.
