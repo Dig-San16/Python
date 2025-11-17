@@ -7,5 +7,5 @@ Juntamente com o conteúdo do curso **"Desenvolvimento Back-end em Python"** da 
 
 ## OBS Urgente!
 
-este repositório não está 100% completo, alguns conceitos não foram incluídos e provavelmente não vão aparecer,
+Este repositório não está 100% completo, alguns conceitos não foram incluídos e provavelmente não vão aparecer,
 então não espere que o repositório tenha todas as respostas.
