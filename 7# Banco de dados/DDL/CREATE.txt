@@ -1,0 +1,36 @@
+1) Criar um banco de dados:
+CREATE DATABASE nome_do_banco;
+
+
+2) Criar uma tabela:
+CREATE TABLE nome_da_tabela (
+    coluna1 tipo_dado [opções],
+    coluna2 tipo_dado [opções],
+    ...
+    [CONSTRAINT restrição]
+);
+
+Exemplo:
+CREATE TABLE empregados (
+    id INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    idade INT,
+    salario DECIMAL(10, 2)
+);
+
+
+3) Criar um índice:
+CREATE INDEX nome_do_indice ON nome_da_tabela (coluna1, coluna2, ...);
+
+
+4) Criar uma view (visão):
+CREATE VIEW nome_da_view AS
+SELECT coluna1, coluna2, ...
+FROM nome_da_tabela
+WHERE condição;
+
+
+5) Criar um usuário:
+CREATE USER nome_do_usuario IDENTIFIED BY senha;
+
+

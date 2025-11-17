@@ -1,0 +1,18 @@
+1) Excluir um banco de dados:
+DROP DATABASE nome_do_banco;
+
+
+2) Excluir uma tabela:
+DROP TABLE nome_da_tabela;
+
+
+3) Excluir um índice:
+DROP INDEX nome_do_indice ON nome_da_tabela;
+
+
+4) Excluir uma view (visão):
+DROP VIEW nome_da_view;
+
+
+5)Excluir um usuário:
+DROP USER nome_do_usuario;

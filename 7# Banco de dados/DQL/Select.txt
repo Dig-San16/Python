@@ -1,0 +1,96 @@
+1) Selecionar todas as colunas de uma tabela:
+SELECT * FROM nome_da_tabela;
+
+
+2) Selecionar colunas específicas:
+SELECT coluna1, coluna2 FROM nome_da_tabela;
+
+
+3) Filtrar registros com base em uma condição:
+SELECT coluna1, coluna2 FROM nome_da_tabela WHERE condição;
+Exemplo:
+SELECT nome, idade FROM pessoas WHERE idade > 18;
+
+
+4) Ordenar os resultados por uma ou mais colunas:
+SELECT coluna1, coluna2 FROM nome_da_tabela ORDER BY coluna1 [ASC|DESC];
+Exemplo:
+SELECT nome, idade FROM pessoas ORDER BY idade DESC;
+
+
+5) Agrupar resultados com base em uma ou mais colunas e aplicar funções agregadas:
+SELECT coluna1, COUNT(*) FROM nome_da_tabela GROUP BY coluna1;
+Exemplo:
+SELECT departamento, COUNT(*) FROM empregados GROUP BY departamento;
+
+
+6) Filtrar grupos de registros após a aplicação de GROUP BY:
+SELECT coluna1, COUNT(*) FROM nome_da_tabela GROUP BY coluna1 HAVING condição;
+Exemplo:
+SELECT departamento, COUNT(*) FROM empregados GROUP BY departamento HAVING COUNT(*) > 10;
+
+
+7) Retornar registros que têm correspondência em ambas as tabelas.
+SELECT coluna1, coluna2 FROM tabela1 INNER JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
+
+
+8) Retorna todos os registros da tabela da esquerda e os registros correspondentes da tabela da direita.
+SELECT coluna1, coluna2 FROM tabela1 LEFT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
+
+
+9) Retorna todos os registros da tabela da direita e os registros correspondentes da tabela da esquerda.
+SELECT coluna1, coluna2 FROM tabela1 RIGHT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
+
+
+10) Retorna registros quando há uma correspondência em uma das tabelas.
+SELECT coluna1, coluna2 FROM tabela1 FULL JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
+
+
+11) UNION: Remove duplicatas.
+SELECT coluna1 FROM tabela1 UNION SELECT coluna1 FROM tabela2;
+
+
+12) UNION ALL: Inclui duplicatas.
+SELECT coluna1 FROM tabela1 UNION ALL SELECT coluna1 FROM tabela2;
+
+
+13) Remover duplicatas dos resultados:
+SELECT DISTINCT coluna1 FROM nome_da_tabela;
+
+
+14) Limitar o número de registros retornados e pular um número de registros:
+SELECT coluna1, coluna2 FROM nome_da_tabela LIMIT n OFFSET m;
+Exemplo:
+SELECT nome FROM empregados LIMIT 10 OFFSET 5;
+
+
+15) Utilizar uma consulta dentro de outra consulta:
+SELECT coluna1 FROM nome_da_tabela WHERE coluna2 IN (SELECT coluna2 FROM outra_tabela WHERE condição);
+Exemplo:
+SELECT nome FROM empregados WHERE id IN (SELECT empregado_id FROM projetos WHERE projeto = 'Projeto X');
+
+
+16) Utilizar lógica condicional dentro da consulta:
+SELECT coluna1, 
+       CASE 
+         WHEN condição1 THEN resultado1 
+         WHEN condição2 THEN resultado2 
+         ELSE resultado_default 
+       END AS alias_coluna 
+FROM nome_da_tabela;
+Exemplo:
+SELECT nome, 
+       CASE 
+         WHEN idade < 18 THEN 'Menor de idade' 
+         ELSE 'Adulto' 
+       END AS status_idade 
+FROM pessoas;
+
+
+17) Verificar a existência de registros em uma subconsulta:
+SELECT coluna1 FROM nome_da_tabela WHERE EXISTS (SELECT 1 FROM outra_tabela WHERE condição);
+Exemplo:
+SELECT nome FROM empregados WHERE EXISTS (SELECT 1 FROM projetos WHERE empregado_id = empregados;
+
+
+

@@ -1,0 +1,2 @@
+Remover todos os registros de uma tabela sem remover a estrutura da tabela:
+TRUNCATE TABLE nome_da_tabela;

@@ -1,0 +1,68 @@
+[NOT NULL]
+Garante que uma coluna não pode aceitar valores nulos (ou seja, deve sempre ter um valor).
+Exemplo:
+CREATE TABLE clientes (
+  id INT NOT NULL,
+  nome VARCHAR(100) NOT NULL
+);
+
+
+[UNIQUE]
+Garante que todos os valores em uma coluna ou conjunto de colunas sejam únicos, ou seja, não podem se repetir.
+Exemplo:
+CREATE TABLE clientes (
+  email VARCHAR(100) UNIQUE
+);
+
+
+[PRIMARY KEY]
+Define uma coluna ou conjunto de colunas como a chave primária da tabela. Uma chave primária deve ter valores únicos e não pode conter valores nulos.
+Exemplo:
+CREATE TABLE clientes (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100)
+);
+
+
+[FOREIGN KEY]
+Cria uma relação entre duas tabelas. A constraint FOREIGN KEY garante que o valor de uma coluna (ou conjunto de colunas) em uma tabela corresponda a valores de uma coluna em outra tabela.
+Exemplo:
+CREATE TABLE pedidos (
+  id INT PRIMARY KEY,
+  cliente_id INT,
+  FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+
+
+[CHECK]
+Garante que os valores inseridos em uma coluna satisfaçam uma condição específica.
+Exemplo:
+CREATE TABLE produtos (
+  id INT PRIMARY KEY,
+  preco DECIMAL(10, 2) CHECK (preco > 0)
+);
+
+
+[DEFAULT]
+Define um valor padrão para uma coluna caso nenhum valor seja inserido.
+Exemplo:
+CREATE TABLE clientes (
+  id INT PRIMARY KEY,
+  estado VARCHAR(2) DEFAULT 'SP'
+);
+
+
+[AUTO_INCREMENT (ou SERIAL, dependendo do banco de dados)]
+
+Usada para gerar automaticamente valores únicos e sequenciais para uma coluna (geralmente para chaves primárias).
+Exemplo:
+CREATE TABLE clientes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100)
+);
+
+
+[INDEX]
+Não é exatamente uma constraint, mas ajuda a melhorar a performance nas buscas de dados. Cria índices em colunas para otimizar consultas.
+Exemplo:
+CREATE INDEX idx_nome ON clientes(nome);

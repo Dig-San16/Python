@@ -1,0 +1,28 @@
+1) Alterar a estrutura de uma tabela (adicionar coluna):
+ALTER TABLE nome_da_tabela ADD coluna tipo_dado [opções];
+Exemplo:
+ALTER TABLE empregados ADD data_admissao DATE;
+
+
+2) Alterar uma coluna existente:
+ALTER TABLE nome_da_tabela MODIFY coluna tipo_dado [opções];
+Exemplo:
+ALTER TABLE empregados MODIFY salario DECIMAL(12, 2);
+
+
+3) Renomear uma tabela:
+ALTER TABLE nome_antigo RENAME TO nome_novo;
+
+
+4) Alterar ou adicionar restrições:
+ALTER TABLE nome_da_tabela ADD CONSTRAINT nome_da_restricao CONSTRAINT_TYPE (coluna);
+Exemplo:
+ALTER TABLE empregados ADD CONSTRAINT chk_idade CHECK (idade >= 18);
+
+
+5) Alterar um índice:
+ALTER INDEX nome_do_indice ON nome_da_tabela REBUILD;
+
+
+6) Renomear uma coluna em uma tabela:
+ALTER TABLE nome_da_tabela RENAME COLUMN coluna_antiga TO coluna_nova;

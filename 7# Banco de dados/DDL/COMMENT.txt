@@ -1,0 +1,2 @@
+Adicionar um comentário a uma coluna ou tabela (dependendo do sistema de gerenciamento de banco de dados):
+COMMENT ON COLUMN nome_da_tabela.coluna IS 'Comentário sobre a coluna';
